@@ -6,6 +6,7 @@ import CurrentWeather from '../@components/CurrentWeather';
 import { getUserCoordinatesTC } from '../@store/current-weather/slice';
 import Forecast from '../@components/Forecast/Forecast';
 import Search from '../@components/Search/Search';
+import FemaleDefaultAvatar from '../@components/SVG/FemaleDefaultAvatar';
 
 export const AppContainer: React.FC = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ export const AppContainer: React.FC = () => {
       <Paper elevation={3}>
         <Forecast />
       </Paper>
+      <FemaleDefaultAvatar />
     </div>
   );
 };
