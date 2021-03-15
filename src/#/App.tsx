@@ -2,6 +2,7 @@ import { Button, makeStyles } from '@material-ui/core';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import FilterLink from '../@components/FilterLink';
+import { DiscountFilters } from '../@types';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,23 +17,10 @@ export const AppContainer: React.FC = () => {
 
   return (
     <div className={classes.root}>
-      <Button variant="outlined">Default</Button>
-      <Button variant="outlined" color="primary">
-        Primary
-      </Button>
-      <Button variant="outlined" color="secondary">
-        Secondary
-      </Button>
-      <Button variant="outlined" disabled>
-        Disabled
-      </Button>
-      <Button variant="outlined" color="primary" href="#outlined-buttons">
-        Link
-      </Button>
-      <FilterLink type="GOLD">Gold</FilterLink>
-      <FilterLink type="SILVER">Silver</FilterLink>
-      <FilterLink type="WOOD">Wood</FilterLink>
-      <FilterLink type="STANDART">Standart</FilterLink>
+      <FilterLink filterType={DiscountFilters.GOLD}>Gold</FilterLink>
+      <FilterLink filterType={DiscountFilters.SILVER}>Silver</FilterLink>
+      <FilterLink filterType={DiscountFilters.WOOD}>Wood</FilterLink>
+      <FilterLink filterType={DiscountFilters.STANDART}>Standart</FilterLink>
     </div>
   );
 };

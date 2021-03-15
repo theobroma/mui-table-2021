@@ -1,7 +1,18 @@
-export type FilterType = 'SHOW_ALL' | 'SHOW_ACTIVE' | 'SHOW_COMPLETED';
+// export type DiscountType = 'GOLD' | 'SILVER' | 'WOOD' | 'STANDART';
+export type FilterType = 'GOLD' | 'SILVER' | 'WOOD' | 'STANDART';
 
-export const VisibilityFilters = {
-  SHOW_ALL: 'SHOW_ALL' as FilterType,
-  SHOW_COMPLETED: 'SHOW_COMPLETED' as FilterType,
-  SHOW_ACTIVE: 'SHOW_ACTIVE' as FilterType,
+export type FilterItemType = {
+  name: FilterType;
+  active: boolean;
+};
+
+export type FilterListType = {
+  data: FilterItemType[];
+};
+
+export const DiscountFilters = {
+  GOLD: 'GOLD' as FilterType,
+  SILVER: 'SILVER' as FilterType,
+  WOOD: 'WOOD' as FilterType,
+  STANDART: 'STANDART' as FilterType,
 };
