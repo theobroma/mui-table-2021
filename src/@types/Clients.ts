@@ -2,7 +2,7 @@ import { DiscountType } from '.';
 
 export type GenderType = 'MALE' | 'FEMALE';
 
-export type ClientType = {
+export type ClientsItemType = {
   _id: string;
   name: string;
   discountType: DiscountType;

@@ -1,6 +1,6 @@
-import { ClientType } from '../../@types/Clients';
+import { ClientsItemType } from '../../@types/Clients';
 
-export const clientsMock: ClientType[] = [
+export const clientsMock: ClientsItemType[] = [
   {
     _id: '5a07bc6ba958450408b4e74a',
     name: 'Svetlana Sorokovnikova',
