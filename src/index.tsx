@@ -13,7 +13,7 @@ import reportWebVitals from './reportWebVitals';
 import './@assets/styles/index.scss';
 
 // Open Source typefaces
-import 'typeface-roboto';
+import '@fontsource/open-sans'; // Defaults to weight 400.
 
 import THEME from './theme.json';
 

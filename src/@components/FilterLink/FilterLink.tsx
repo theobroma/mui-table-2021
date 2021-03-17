@@ -24,12 +24,11 @@ export const FilterLink: React.FC<IProps> = ({ children, filterType }) => {
 
   return (
     <Button
-      //   type="button"
-      //   className={cx({
-      //     // The user cannot turn off the only included discount type.
-      //     // isDisabled: activeFiltersCount < 2 && currentFilter.active,
-      //   })}
       color={currentFilter.active ? 'secondary' : undefined}
+      // The user cannot turn off the only included discount type
+      disabled={
+        activeFiltersCount < 2 && currentFilter.active ? true : undefined
+      }
       onClick={() => dispatch(setFilterAC(filterType))}
       variant="outlined"
     >
