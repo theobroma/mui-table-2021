@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { createMuiTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
+import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import { AppContainer } from './#/App';
 import { store, persistor } from './configureStore';
 import LoadingPage from './@components/UI/LoadingPage';
@@ -15,11 +15,9 @@ import './@assets/styles/index.scss';
 // Open Source typefaces
 import '@fontsource/open-sans'; // Defaults to weight 400.
 
-import THEME from './theme.json';
+import { theme } from './@themes/theme';
 
 const rootEl = document.getElementById('root');
-
-const theme = createMuiTheme(THEME);
 
 render(
   <React.StrictMode>
