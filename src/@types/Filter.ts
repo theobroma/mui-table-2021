@@ -1,5 +1,5 @@
-export type DiscountType = 'GOLD' | 'SILVER' | 'WOOD' | 'STANDART';
-export type FilterType = 'GOLD' | 'SILVER' | 'WOOD' | 'STANDART';
+export type DiscountType = 'GOLD' | 'SILVER' | 'WOOD' | 'STANDART'; // TODO:
+export type FilterType = 'GOLD' | 'SILVER' | 'WOOD' | 'STANDART'; // TODO:
 
 export type FilterItemType = {
   name: FilterType;

@@ -7,7 +7,9 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import { ClientsItemType } from '../../@types/Clients';
+import { ClientsItemType, Genders } from '../../@types/Clients';
+import FemaleDefaultAvatar from '../SVG/FemaleDefaultAvatar';
+import MaleDefaultAvatar from '../SVG/MaleDefaultAvatar';
 
 const useStyles = makeStyles({
   table: {
@@ -26,7 +28,10 @@ export const TableFC: React.FC<Props> = ({ data }) => {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Клиент</TableCell>
+            <TableCell>
+              Клиент
+              <span>Имя</span>
+            </TableCell>
             <TableCell align="right">Скидка тип</TableCell>
             <TableCell align="right">Потрачено</TableCell>
             <TableCell align="right">СК.Сумма</TableCell>
@@ -37,6 +42,11 @@ export const TableFC: React.FC<Props> = ({ data }) => {
           {data.map((client: ClientsItemType) => (
             <TableRow key={client._id}>
               <TableCell component="th" scope="row">
+                {client.gender === Genders.FEMALE ? (
+                  <FemaleDefaultAvatar />
+                ) : (
+                  <MaleDefaultAvatar />
+                )}
                 {client.name}
               </TableCell>
               <TableCell align="right">{client.discountType}</TableCell>
