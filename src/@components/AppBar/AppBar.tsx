@@ -3,13 +3,13 @@ import { makeStyles, AppBar, Toolbar, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
-    marginTop: 8,
-    width: '100%',
-    marginBottom: 16,
+    // marginTop: 8,
+    // width: '100%',
+    // marginBottom: 16,
   },
 });
 
-export const SimpleAppBar: React.FC = (props) => {
+export const CustomAppBar: React.FC = (props) => {
   const classes = useStyles(props);
   return (
     <div className={classes.root}>
@@ -21,3 +21,5 @@ export const SimpleAppBar: React.FC = (props) => {
     </div>
   );
 };
+
+export default CustomAppBar;
