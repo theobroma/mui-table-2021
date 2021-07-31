@@ -1,5 +1,4 @@
 import * as React from 'react';
-import cx from 'classnames';
 import { Button } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterAC } from '../../@store/filter/slice';
