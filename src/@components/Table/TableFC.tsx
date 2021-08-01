@@ -8,8 +8,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { ClientsItemType, Genders } from '../../@types/Clients';
-import FemaleDefaultAvatar from '../SVG/FemaleDefaultAvatar';
-import MaleDefaultAvatar from '../SVG/MaleDefaultAvatar';
+import { ReactComponent as FemaleDefaultAvatar } from '../UI/Icons/FemaleDefaultAvatar.svg';
+import { ReactComponent as MaleDefaultAvatar } from '../UI/Icons/MaleDefaultAvatar.svg';
 
 const useStyles = makeStyles({
   table: {
