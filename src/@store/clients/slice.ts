@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { clientsMock } from './mockclients';
 
 const initialState = {
@@ -8,18 +8,7 @@ const initialState = {
 export const slice = createSlice({
   name: 'clients',
   initialState,
-  reducers: {
-    // setFilterAC: (state, action: PayloadAction<FilterType>) => {
-    //   return {
-    //     data: state.data.map((filter) => {
-    //       if (filter.name === action.payload) {
-    //         return { ...filter, active: !filter.active };
-    //       }
-    //       return filter;
-    //     }),
-    //   };
-    // },
-  },
+  reducers: {},
 });
 
 export const clientsReducer = slice.reducer;
