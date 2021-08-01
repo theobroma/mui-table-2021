@@ -4,10 +4,10 @@ import { useSelector } from 'react-redux';
 import Footer from '../../@components/Footer';
 import CustomAppBar from '../../@components/AppBar';
 import TableFC from '../../@components/Table';
-import { clientsSelector } from '../../@store/clients/selectors';
+import { filteredClientsSelector } from '../../@store/clients/selectors';
 
 const HomeView: React.FC = () => {
-  const clientsData = useSelector(clientsSelector).data;
+  const clientsData = useSelector(filteredClientsSelector);
   return (
     <div className="HolyGrail">
       <Box mb={2}>
