@@ -8,7 +8,8 @@
 
 ### Guides
 
-- [json-server](https://gupta-sajal17.medium.com/how-to-create-a-fake-rest-api-with-json-server-34ebba6a964e)
+- [json-server start](https://gupta-sajal17.medium.com/how-to-create-a-fake-rest-api-with-json-server-34ebba6a964e)
+- [json-server params](https://blog.logrocket.com/how-to-bootstrap-your-project-with-json-server/)
 - [concurrently](https://dev.to/numtostr/running-react-and-node-js-in-one-shot-with-concurrently-2oac)
 
 ## Quick Start
