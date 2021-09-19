@@ -1,7 +1,7 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
+import { createTheme } from '@material-ui/core';
+import blueGrey from '@material-ui/core/colors/blueGrey';
 
-export const theme = createMuiTheme({
+export const theme = createTheme({
   typography: {
     fontFamily: '"Open Sans", sans-serif',
     fontSize: 14,
@@ -11,7 +11,7 @@ export const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: purple[500],
+      main: blueGrey[400],
     },
     secondary: {
       main: 'rgb(240, 0, 71, 1)',

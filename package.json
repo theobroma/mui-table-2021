@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "license": "ISC",
     "private": true,
+    "proxy": "http://localhost:4000",
     "dependencies": {
         "@fontsource/open-sans": "^4.5.0",
         "@material-ui/core": "^4.12.3",
@@ -43,7 +44,8 @@
         "format": "prettier --write src/**/*.{js,jsx,ts,tsx,yml,json,css,scss,md}",
         "lint": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
         "serve": "serve -s build",
-        "json:server": "json-server --watch db.json"
+        "json:server": "json-server -p 4000 --watch db.json",
+        "dev": "concurrently \"npm run json:server\" \"npm run start\""
     },
     "eslintConfig": {
         "extends": [
@@ -64,6 +66,7 @@
         ]
     },
     "devDependencies": {
+        "concurrently": "^6.2.1",
         "eslint": "^7.32.0",
         "eslint-config-airbnb-typescript-prettier": "^4.2.0",
         "prettier": "^2.3.2"
