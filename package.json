@@ -20,7 +20,7 @@
         "@types/react-dom": "^17.0.9",
         "@types/react-redux": "^7.1.18",
         "@types/redux-logger": "^3.0.9",
-        "axios": "^0.21.1",
+        "axios": "^0.21.4",
         "classnames": "^2.3.1",
         "json-server": "^0.16.3",
         "nanoid": "^3.1.23",
@@ -44,7 +44,7 @@
         "format": "prettier --write src/**/*.{js,jsx,ts,tsx,yml,json,css,scss,md}",
         "lint": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
         "serve": "serve -s build",
-        "json:server": "json-server -p 4000 --watch db.json --routes routes.json",
+        "json:server": "json-server -p 4000 --delay 1000 --watch db.json --routes routes.json",
         "dev": "concurrently \"npm run json:server\" \"npm run start\""
     },
     "eslintConfig": {

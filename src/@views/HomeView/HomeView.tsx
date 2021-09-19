@@ -1,13 +1,20 @@
-import React from 'react';
 import { Box, Container, Grid } from '@material-ui/core';
-import { useSelector } from 'react-redux';
-import Footer from '../../@components/Footer';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import CustomAppBar from '../../@components/AppBar';
+import Footer from '../../@components/Footer';
 import TableFC from '../../@components/Table';
 import { filteredClientsSelector } from '../../@store/clients/selectors';
+import { fetchUsersTC } from '../../@store/clients/slice';
 
 const HomeView: React.FC = () => {
+  const dispatch = useDispatch();
   const clientsData = useSelector(filteredClientsSelector);
+
+  useEffect(() => {
+    dispatch(fetchUsersTC());
+  }, [dispatch]);
+
   return (
     <div className="HolyGrail">
       <Box mb={2}>
