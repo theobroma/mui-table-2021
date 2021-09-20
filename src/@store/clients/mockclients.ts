@@ -2,7 +2,7 @@ import { ClientsItemType } from '../../@types/Clients';
 
 export const clientsMock: ClientsItemType[] = [
   {
-    _id: '5a07bc6ba958450408b4e74a',
+    id: '5a07bc6ba958450408b4e74a',
     name: 'Svetlana Sorokovnikova',
     discountType: 'SILVER',
     spentSum: 221,
@@ -10,7 +10,7 @@ export const clientsMock: ClientsItemType[] = [
     gender: 'FEMALE',
   },
   {
-    _id: '5a07bc6ba958450408b4e74b',
+    id: '5a07bc6ba958450408b4e74b',
     name: 'Sergei Pluhin',
     discountType: 'GOLD',
     spentSum: 645,
@@ -18,7 +18,7 @@ export const clientsMock: ClientsItemType[] = [
     gender: 'MALE',
   },
   {
-    _id: '5a07bc6ba958450408b4e74c',
+    id: '5a07bc6ba958450408b4e74c',
     name: 'Greta Holodnaia',
     discountType: 'WOOD',
     spentSum: 320,
@@ -26,7 +26,7 @@ export const clientsMock: ClientsItemType[] = [
     gender: 'FEMALE',
   },
   {
-    _id: '5a07bc6ba958450408b4e74d',
+    id: '5a07bc6ba958450408b4e74d',
     name: 'Andrei Stelia',
     discountType: 'SILVER',
     spentSum: 124,
@@ -34,7 +34,7 @@ export const clientsMock: ClientsItemType[] = [
     gender: 'MALE',
   },
   {
-    _id: '5a07bc6ba958450408b4e74e',
+    id: '5a07bc6ba958450408b4e74e',
     name: 'Alex Bulavka',
     discountType: 'WOOD',
     spentSum: 101,
@@ -42,7 +42,7 @@ export const clientsMock: ClientsItemType[] = [
     gender: 'MALE',
   },
   {
-    _id: '5a07bc6ba958450408b4e74f',
+    id: '5a07bc6ba958450408b4e74f',
     name: 'Igor Shumilovec',
     discountType: 'SILVER',
     spentSum: 44,
@@ -50,7 +50,7 @@ export const clientsMock: ClientsItemType[] = [
     gender: 'FEMALE',
   },
   {
-    _id: '5a07bc6ba958450408b4e74g',
+    id: '5a07bc6ba958450408b4e74g',
     name: 'Semen Bluher',
     discountType: 'SILVER',
     spentSum: 543,
@@ -58,7 +58,7 @@ export const clientsMock: ClientsItemType[] = [
     gender: 'MALE',
   },
   {
-    _id: '5a07bc6ba958450408b4e74h',
+    id: '5a07bc6ba958450408b4e74h',
     name: 'Irina Chernisheva',
     discountType: 'SILVER',
     spentSum: 126,
@@ -66,7 +66,7 @@ export const clientsMock: ClientsItemType[] = [
     gender: 'FEMALE',
   },
   {
-    _id: '5a07bc6ba958450408b4e74j',
+    id: '5a07bc6ba958450408b4e74j',
     name: 'Dasha Savelieva',
     discountType: 'WOOD',
     spentSum: 221,

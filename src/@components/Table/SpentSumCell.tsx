@@ -3,12 +3,14 @@ import TableCell from '@material-ui/core/TableCell';
 import usePrevious from '../../@hooks/usePrevious';
 
 type PropsType = {
-  // updateStatus: (status: string) => void;
+  updateCb: (userId: string, spentSum: number) => void;
+  userId: string;
   value: number;
 };
 
 export const SpentSumCell: React.FC<PropsType> = ({
-  // updateStatus,
+  updateCb,
+  userId,
   value,
 }) => {
   const [editMode, setEditMode] = useState<boolean>(false);
@@ -24,7 +26,7 @@ export const SpentSumCell: React.FC<PropsType> = ({
   const deactivateEditMode = () => {
     // prevent unnecessary api call
     if (cellVal !== prevCellVal) {
-      // updateStatus(statusVal);
+      updateCb(userId, cellVal);
     }
     setEditMode(false);
   };

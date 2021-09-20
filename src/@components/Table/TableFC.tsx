@@ -7,6 +7,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { updateSpentSumTC } from '../../@store/clients/slice';
 import { ClientsItemType, Genders } from '../../@types/Clients';
 import { ReactComponent as FemaleDefaultAvatar } from '../UI/Icons/FemaleDefaultAvatar.svg';
 import { ReactComponent as MaleDefaultAvatar } from '../UI/Icons/MaleDefaultAvatar.svg';
@@ -24,6 +26,12 @@ interface Props {
 
 export const TableFC: React.FC<Props> = ({ data }) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  const handleUpdateSum = (userId: string, spentSum: number) => {
+    dispatch(updateSpentSumTC({ userId, spentSum }));
+  };
+
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
@@ -41,7 +49,7 @@ export const TableFC: React.FC<Props> = ({ data }) => {
         </TableHead>
         <TableBody>
           {data.map((client: ClientsItemType) => (
-            <TableRow key={client._id}>
+            <TableRow key={client.id}>
               <TableCell component="th" scope="row">
                 {client.gender === Genders.FEMALE ? (
                   <FemaleDefaultAvatar />
@@ -52,7 +60,11 @@ export const TableFC: React.FC<Props> = ({ data }) => {
               </TableCell>
               <TableCell align="right">{client.discountType}</TableCell>
               {/* <TableCell align="right">{client.spentSum}</TableCell> */}
-              <SpentSumCell value={client.spentSum} />
+              <SpentSumCell
+                value={client.spentSum}
+                updateCb={handleUpdateSum}
+                userId={client.id}
+              />
               <TableCell align="right">
                 {(client.spentSum * client.discountProcent) / 100}
               </TableCell>

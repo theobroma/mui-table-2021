@@ -34,6 +34,23 @@ export const fetchUsersTC = createAsyncThunk<any, void, { state: any }>(
   },
 );
 
+export const updateSpentSumTC = createAsyncThunk<any, any, { state: any }>(
+  'clients/updateSpentSum',
+  async (params, thunkAPI) => {
+    try {
+      const res = await UsersAPI.updateSpentSum(params.userId, params.spentSum);
+      return res;
+    } catch (err: any) {
+      // Use `err.response.data` as `action.payload` for a `rejected` action,
+      // by explicitly returning it using the `rejectWithValue()` utility
+      return thunkAPI.rejectWithValue(err.response.data);
+    } finally {
+      // refetch
+      thunkAPI.dispatch(fetchUsersTC());
+    }
+  },
+);
+
 export const slice = createSlice({
   name: 'clients',
   initialState: clientsInitialState,

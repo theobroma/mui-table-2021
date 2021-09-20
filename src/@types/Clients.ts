@@ -8,7 +8,7 @@ export const Genders = {
 };
 
 export type ClientsItemType = {
-  _id: string;
+  id: string;
   name: string;
   discountType: DiscountType;
   spentSum: number;
