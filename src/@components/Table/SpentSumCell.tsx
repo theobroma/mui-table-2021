@@ -44,20 +44,21 @@ export const SpentSumCell: React.FC<PropsType> = ({
   return (
     <>
       {!editMode ? (
-        // <div>
-        //   <span onDoubleClick={activateEditMode}>{status || 'No status'}</span>
-        // </div>
         <TableCell align="right" onDoubleClick={activateEditMode}>
           {value}
         </TableCell>
       ) : (
-        <input
-          ref={inputRef}
-          onChange={onInputChange}
-          // autoFocus
-          onBlur={deactivateEditMode}
-          value={cellVal}
-        />
+        <TableCell align="right">
+          <input
+            name="spentSum"
+            ref={inputRef}
+            onChange={onInputChange}
+            // autoFocus
+            onBlur={deactivateEditMode}
+            value={cellVal}
+            style={{ maxWidth: '50px' }}
+          />
+        </TableCell>
       )}
     </>
   );
