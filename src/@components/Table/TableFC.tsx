@@ -12,6 +12,7 @@ import { updateSpentSumTC } from '../../@store/clients/slice';
 import { ClientsItemType, Genders } from '../../@types/Clients';
 import { ReactComponent as FemaleDefaultAvatar } from '../UI/Icons/FemaleDefaultAvatar.svg';
 import { ReactComponent as MaleDefaultAvatar } from '../UI/Icons/MaleDefaultAvatar.svg';
+import { DiscountTypeCell } from './DiscountTypeCell';
 import { SpentSumCell } from './SpentSumCell';
 
 const useStyles = makeStyles({
@@ -58,7 +59,12 @@ export const TableFC: React.FC<Props> = ({ data }) => {
                 )}
                 {client.name}
               </TableCell>
-              <TableCell align="right">{client.discountType}</TableCell>
+              {/* <TableCell align="right">{client.discountType}</TableCell> */}
+              <DiscountTypeCell
+                value={client.discountType}
+                updateCb={handleUpdateSum}
+                userId={client.id}
+              />
               {/* <TableCell align="right">{client.spentSum}</TableCell> */}
               <SpentSumCell
                 value={client.spentSum}
