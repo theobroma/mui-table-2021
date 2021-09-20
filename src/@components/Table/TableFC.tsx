@@ -1,4 +1,4 @@
-import React from 'react';
+import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -6,10 +6,11 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
+import React from 'react';
 import { ClientsItemType, Genders } from '../../@types/Clients';
 import { ReactComponent as FemaleDefaultAvatar } from '../UI/Icons/FemaleDefaultAvatar.svg';
 import { ReactComponent as MaleDefaultAvatar } from '../UI/Icons/MaleDefaultAvatar.svg';
+import { SpentSumCell } from './SpentSumCell';
 
 const useStyles = makeStyles({
   table: {
@@ -50,7 +51,8 @@ export const TableFC: React.FC<Props> = ({ data }) => {
                 {client.name}
               </TableCell>
               <TableCell align="right">{client.discountType}</TableCell>
-              <TableCell align="right">{client.spentSum}</TableCell>
+              {/* <TableCell align="right">{client.spentSum}</TableCell> */}
+              <SpentSumCell value={client.spentSum} />
               <TableCell align="right">
                 {(client.spentSum * client.discountProcent) / 100}
               </TableCell>
