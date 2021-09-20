@@ -14,6 +14,12 @@ import './@assets/styles/index.scss';
 
 // Open Source typefaces
 import '@fontsource/open-sans'; // Defaults to weight 400.
+// requiered for Material UI
+// https://material-ui.com/ru/components/typography/#install-with-npm
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 import { theme } from './@themes/theme';
 
