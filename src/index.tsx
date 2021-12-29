@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import { AppContainer } from './@routes/App';
-import { store, persistor } from './configureStore';
+import { store, persistor } from './@store/configureStore';
 import LoadingPage from './@components/UI/LoadingPage';
 import reportWebVitals from './reportWebVitals';
 

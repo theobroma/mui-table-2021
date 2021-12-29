@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import { createBrowserHistory } from 'history';
 import { createLogger } from 'redux-logger';
 import {
   persistStore,
@@ -13,9 +12,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import { rootReducer } from './@store/index';
-
-// export const history = createBrowserHistory();
+import { rootReducer } from './index';
 
 const persistConfig = {
   key: 'root',
