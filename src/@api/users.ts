@@ -1,10 +1,19 @@
 // https://stackoverflow.com/a/62611888/3988363
+import { ClientsResponseSchema } from '../@types/Clients';
 import { instance } from './api';
 
 export const UsersAPI = {
   getUsers: async () => {
     try {
       const response = await instance.get<any>(`/users`);
+
+      try {
+        ClientsResponseSchema.parse(response.data);
+      } catch (error) {
+        console.log(error);
+        // Log & alert error <-- very important!
+      }
+
       return response.data;
     } catch (e) {
       if (e instanceof Error) {

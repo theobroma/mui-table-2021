@@ -21,7 +21,7 @@ import { DiscountType } from '.';
 // ===Schemas===
 
 export const GendersEnum = z.enum(['MALE', 'FEMALE']);
-type GenderType = z.infer<typeof GendersEnum>;
+export type GenderType = z.infer<typeof GendersEnum>;
 
 export const ClientsItemSchema = z.object({
   id: z.string(),
@@ -32,3 +32,6 @@ export const ClientsItemSchema = z.object({
   gender: z.any(),
 });
 export type ClientsItemType = z.infer<typeof ClientsItemSchema>;
+
+export const ClientsResponseSchema = z.array(ClientsItemSchema);
+export type ClientsResponseType = z.infer<typeof ClientsResponseSchema>;
