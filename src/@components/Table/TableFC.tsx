@@ -9,7 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { updateSpentSumTC } from '../../@store/clients/slice';
-import { ClientsItemType, Genders } from '../../@types/Clients';
+import { ClientsItemType, GendersEnum } from '../../@types/Clients';
 import { ReactComponent as FemaleDefaultAvatar } from '../UI/Icons/FemaleDefaultAvatar.svg';
 import { ReactComponent as MaleDefaultAvatar } from '../UI/Icons/MaleDefaultAvatar.svg';
 import { DiscountTypeCell } from './DiscountTypeCell';
@@ -52,7 +52,7 @@ export const TableFC: React.FC<Props> = ({ data }) => {
           {data.map((client: ClientsItemType) => (
             <TableRow key={client.id}>
               <TableCell component="th" scope="row">
-                {client.gender === Genders.FEMALE ? (
+                {client.gender === GendersEnum.enum.FEMALE ? (
                   <FemaleDefaultAvatar />
                 ) : (
                   <MaleDefaultAvatar />
