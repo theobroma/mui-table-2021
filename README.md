@@ -1,6 +1,14 @@
 # Material UI table with filter
 
-## Usefull links
+## :fire: Built With
+
+This project was built using these technologies.
+
+- [React.js v17](https://17.reactjs.org/)
+- [Material UI v4](https://v4.mui.com/ru/)
+- [json-server](https://github.com/typicode/json-server)
+
+## :link: Usefull links
 
 ### Setup
 
@@ -15,7 +23,7 @@
 
 - [editable table with Material UI](https://www.geeksforgeeks.org/how-to-create-an-editable-table-with-add-delete-and-search-filter-using-reactjs/)
 
-## Quick Start
+## 🛠 Quick Start
 
 ```bash
 # Install dependencies
