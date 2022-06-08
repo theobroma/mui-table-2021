@@ -10,7 +10,7 @@ const initialState: FilterListType = {
   ],
 };
 
-export const slice = createSlice({
+export const filterSlice = createSlice({
   name: 'filter',
   initialState,
   reducers: {
@@ -27,5 +27,5 @@ export const slice = createSlice({
   },
 });
 
-export const filterReducer = slice.reducer;
-export const { setFilterAC } = slice.actions;
+export const filterReducer = filterSlice.reducer;
+export const { setFilterAC } = filterSlice.actions;

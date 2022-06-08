@@ -1,21 +1,21 @@
-import * as React from 'react';
 import { Button } from '@material-ui/core';
-import { useDispatch, useSelector } from 'react-redux';
-import { setFilterAC } from '../../@store/filter/slice';
-import { FilterType } from '../../@types';
+import * as React from 'react';
+import { useAppDispatch, useAppSelector } from '../../@store/configureStore';
 import {
   activeFiltersSelector,
   filterSelector,
 } from '../../@store/filter/selectors';
+import { setFilterAC } from '../../@store/filter/slice';
+import { FilterType } from '../../@types';
 
 interface IProps {
   filterType: FilterType;
 }
 
 export const FilterLink: React.FC<IProps> = ({ children, filterType }) => {
-  const dispatch = useDispatch();
-  const filterData = useSelector(filterSelector).data;
-  const activeFiltersCount = useSelector(activeFiltersSelector).length;
+  const dispatch = useAppDispatch();
+  const filterData = useAppSelector(filterSelector).data;
+  const activeFiltersCount = useAppSelector(activeFiltersSelector).length;
 
   const currentFilter = filterData.filter((filter) => {
     return filter.name === filterType;

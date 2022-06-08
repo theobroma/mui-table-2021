@@ -1,15 +1,15 @@
 import { Box, Container, Grid } from '@material-ui/core';
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import CustomAppBar from '../../@components/AppBar';
 import Footer from '../../@components/Footer';
 import TableFC from '../../@components/Table';
 import { filteredClientsSelector } from '../../@store/clients/selectors';
 import { fetchUsersTC } from '../../@store/clients/slice';
+import { useAppDispatch, useAppSelector } from '../../@store/configureStore';
 
 const HomeView: React.FC = () => {
-  const dispatch = useDispatch();
-  const clientsData = useSelector(filteredClientsSelector);
+  const dispatch = useAppDispatch();
+  const clientsData = useAppSelector(filteredClientsSelector);
 
   useEffect(() => {
     dispatch(fetchUsersTC());

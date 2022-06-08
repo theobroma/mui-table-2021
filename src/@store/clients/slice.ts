@@ -51,7 +51,7 @@ export const updateSpentSumTC = createAsyncThunk<any, any, { state: any }>(
   },
 );
 
-export const slice = createSlice({
+export const clientsSlice = createSlice({
   name: 'clients',
   initialState: clientsInitialState,
   reducers: {},
@@ -76,5 +76,5 @@ export const slice = createSlice({
   },
 });
 
-export const clientsReducer = slice.reducer;
+export const clientsReducer = clientsSlice.reducer;
 // export const { setFilterAC } = slice.actions;

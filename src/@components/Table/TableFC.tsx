@@ -7,8 +7,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import { updateSpentSumTC } from '../../@store/clients/slice';
+import { useAppDispatch } from '../../@store/configureStore';
 import { ClientsItemType, GendersEnum } from '../../@types/Clients';
 import { ReactComponent as FemaleDefaultAvatar } from '../UI/Icons/FemaleDefaultAvatar.svg';
 import { ReactComponent as MaleDefaultAvatar } from '../UI/Icons/MaleDefaultAvatar.svg';
@@ -27,7 +27,7 @@ interface Props {
 
 export const TableFC: React.FC<Props> = ({ data }) => {
   const classes = useStyles();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleUpdateSum = (userId: string, spentSum: number) => {
     dispatch(updateSpentSumTC({ userId, spentSum }));
