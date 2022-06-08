@@ -1,11 +1,11 @@
 // https://stackoverflow.com/a/62611888/3988363
-import { ClientsResponseSchema } from '../@types/Clients';
+import { ClientsResponseSchema, ClientsResponseType } from '../@types/Clients';
 import { instance } from './api';
 
 export const UsersAPI = {
   getUsers: async () => {
     try {
-      const response = await instance.get<any>(`/users`);
+      const response = await instance.get<ClientsResponseType>(`/users`);
 
       try {
         ClientsResponseSchema.parse(response.data);

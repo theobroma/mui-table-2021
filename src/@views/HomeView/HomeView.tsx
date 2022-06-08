@@ -7,7 +7,7 @@ import { filteredClientsSelector } from '../../@store/clients/selectors';
 import { fetchUsersTC } from '../../@store/clients/slice';
 import { useAppDispatch, useAppSelector } from '../../@store/configureStore';
 
-const HomeView: React.FC = () => {
+const HomeView = () => {
   const dispatch = useAppDispatch();
   const clientsData = useAppSelector(filteredClientsSelector);
 

@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import { DiscountType } from '.';
+// import { DiscountType } from '.';
 
 // ===Original Types===
 // export type GenderType = 'MALE' | 'FEMALE';
@@ -29,7 +29,7 @@ export const ClientsItemSchema = z.object({
   discountType: z.any(),
   spentSum: z.number(),
   discountProcent: z.number(),
-  gender: z.any(),
+  gender: GendersEnum,
 });
 export type ClientsItemType = z.infer<typeof ClientsItemSchema>;
 
