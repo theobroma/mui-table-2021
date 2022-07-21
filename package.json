@@ -1,78 +1,78 @@
 {
-    "name": "mui-table-2021",
-    "version": "0.1.0",
-    "license": "ISC",
-    "private": true,
-    "proxy": "http://localhost:4000",
-    "dependencies": {
-        "@fontsource/open-sans": "^4.5.10",
-        "@fontsource/roboto": "^4.5.7",
-        "@material-ui/core": "^4.12.4",
-        "@material-ui/icons": "^4.11.3",
-        "@reduxjs/toolkit": "^1.8.2",
-        "@testing-library/jest-dom": "^5.16.4",
-        "@testing-library/react": "^13.3.0",
-        "@testing-library/user-event": "^14.2.0",
-        "@types/jest": "^28.1.1",
-        "@types/node": "^17.0.41",
-        "@types/react": "^17.x",
-        "@types/react-dom": "^17.x",
-        "@types/react-redux": "^7.1.24",
-        "@types/redux-logger": "^3.0.9",
-        "axios": "^0.27.2",
-        "json-server": "^0.17.0",
-        "react": "^17.x",
-        "react-dom": "^17.x",
-        "react-redux": "^8.0.2",
-        "react-scripts": "5.0.1",
-        "redux": "^4.2.0",
-        "redux-logger": "^3.0.6",
-        "redux-persist": "^6.0.0",
-        "sass": "^1.52.2",
-        "typescript": "^4.7.3",
-        "web-vitals": "^2.1.4",
-        "zod": "^3.17.3"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "format": "prettier --write src/**/*.{js,jsx,ts,tsx,yml,json,css,scss,md}",
-        "lint": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
-        "serve": "serve -s build",
-        "json:server": "json-server -p 4000 --delay 300 --watch db.json --routes routes.json",
-        "dev": "concurrently \"npm run json:server\" \"npm run start\""
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "devDependencies": {
-        "concurrently": "^7.2.1",
-        "eslint": "^8.17.0",
-        "eslint-config-airbnb-typescript-prettier": "^5.0.0",
-        "prettier": "^2.6.2"
-    },
-    "engines": {
-        "node": "^16.x"
-    },
-    "resolutions": {
-        "@types/react": "17.x",
-        "@types/react-dom": "17.x"
-    }
+  "name": "mui-table-2021",
+  "version": "0.1.0",
+  "license": "ISC",
+  "private": true,
+  "proxy": "http://localhost:4000",
+  "dependencies": {
+    "@fontsource/open-sans": "^4.5.10",
+    "@fontsource/roboto": "^4.5.7",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@reduxjs/toolkit": "^1.8.3",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.3.0",
+    "@types/jest": "^28.1.6",
+    "@types/node": "^18.0.6",
+    "@types/react": "^17.x",
+    "@types/react-dom": "^17.x",
+    "@types/react-redux": "^7.1.24",
+    "@types/redux-logger": "^3.0.9",
+    "axios": "^0.27.2",
+    "json-server": "^0.17.0",
+    "react": "^17.x",
+    "react-dom": "^17.x",
+    "react-redux": "^8.0.2",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.53.0",
+    "typescript": "^4.7.4",
+    "web-vitals": "^2.1.4",
+    "zod": "^3.17.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,yml,json,css,scss,md}",
+    "lint": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
+    "serve": "serve -s build",
+    "json:server": "json-server -p 4000 --delay 300 --watch db.json --routes routes.json",
+    "dev": "concurrently \"npm run json:server\" \"npm run start\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": "^16.x"
+  },
+  "resolutions": {
+    "@types/react": "17.x",
+    "@types/react-dom": "17.x"
+  }
 }
