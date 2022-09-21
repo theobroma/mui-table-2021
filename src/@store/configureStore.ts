@@ -1,5 +1,5 @@
-import { combineReducers, configureStore, Reducer } from '@reduxjs/toolkit';
-import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import type { TypedUseSelectorHook } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import {
   FLUSH,
@@ -12,6 +12,10 @@ import {
   REHYDRATE,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+
+import type { Reducer } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+
 import { clientsSlice } from './clients/slice';
 import { filterSlice } from './filter/slice';
 // import { RESET_STATE_ACTION_TYPE } from './actions/resetState';
@@ -34,7 +38,7 @@ const reducers = {
 
 const combinedReducer = combineReducers<typeof reducers>(reducers);
 
-export const rootReducer: Reducer<RootState> = (state, action) => {
+const rootReducer: Reducer<RootState> = (state, action) => {
   // if (action.type === RESET_STATE_ACTION_TYPE) {
   //   state = {} as RootState;
   // }
@@ -58,9 +62,8 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-export default { store, persistor };
-
 // ==================== TYPES ====================
+// eslint-disable-next-line import/no-unused-modules
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof combinedReducer>;
 

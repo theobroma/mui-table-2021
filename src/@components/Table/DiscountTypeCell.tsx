@@ -1,7 +1,11 @@
-import React, { ChangeEvent, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import type { ChangeEvent } from 'react';
+
 import TableCell from '@material-ui/core/TableCell';
+
 import usePrevious from '../../@hooks/usePrevious';
-import { DiscountFilters, DiscountType } from '../../@types';
+import type { DiscountType } from '../../@types';
+import { DiscountFilters } from '../../@types';
 
 type PropsType = {
   updateCb: (userId: string, spentSum: number) => void;

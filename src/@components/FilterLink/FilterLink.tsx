@@ -1,12 +1,14 @@
-import { Button } from '@material-ui/core';
 import * as React from 'react';
+
+import { Button } from '@material-ui/core';
+
 import { useAppDispatch, useAppSelector } from '../../@store/configureStore';
 import {
   activeFiltersSelector,
   filterSelector,
 } from '../../@store/filter/selectors';
 import { setFilterAC } from '../../@store/filter/slice';
-import { FilterType } from '../../@types';
+import type { FilterType } from '../../@types';
 
 interface IProps {
   filterType: FilterType;

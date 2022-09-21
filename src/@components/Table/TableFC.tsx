@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -6,12 +8,14 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import React from 'react';
+
 import { updateSpentSumTC } from '../../@store/clients/slice';
 import { useAppDispatch } from '../../@store/configureStore';
-import { ClientsItemType, GendersEnum } from '../../@types/Clients';
+import type { ClientsItemType } from '../../@types/Clients';
+import { GendersEnum } from '../../@types/Clients';
 import { ReactComponent as FemaleDefaultAvatar } from '../UI/Icons/FemaleDefaultAvatar.svg';
 import { ReactComponent as MaleDefaultAvatar } from '../UI/Icons/MaleDefaultAvatar.svg';
+
 import { DiscountTypeCell } from './DiscountTypeCell';
 import { SpentSumCell } from './SpentSumCell';
 

@@ -1,5 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { RootState } from '../configureStore';
+
+import type { RootState } from '../configureStore';
 import { activeFiltersSelector } from '../filter/selectors';
 
 export const clientsSelector = (state: RootState) => {

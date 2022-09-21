@@ -1,4 +1,4 @@
-import { ClientsItemType } from '../../@types/Clients';
+import type { ClientsItemType } from '../../@types/Clients';
 
 export const clientsMock: ClientsItemType[] = [
   {

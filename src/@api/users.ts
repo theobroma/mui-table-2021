@@ -1,5 +1,7 @@
 // https://stackoverflow.com/a/62611888/3988363
-import { ClientsResponseSchema, ClientsResponseType } from '../@types/Clients';
+import type { ClientsResponseType } from '../@types/Clients';
+import { ClientsResponseSchema } from '../@types/Clients';
+
 import { instance } from './api';
 
 export const UsersAPI = {

@@ -1,5 +1,7 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { FilterListType, FilterType } from '../../@types';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+
+import type { FilterListType, FilterType } from '../../@types';
 
 const initialState: FilterListType = {
   data: [
@@ -27,5 +29,5 @@ export const filterSlice = createSlice({
   },
 });
 
-export const filterReducer = filterSlice.reducer;
+// export const filterReducer = filterSlice.reducer;
 export const { setFilterAC } = filterSlice.actions;

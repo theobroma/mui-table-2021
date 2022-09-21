@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+
 import { UsersAPI } from '../../@api/users';
-import { ClientsItemType } from '../../@types/Clients';
-import { waitForMe } from '../../@utils/waitforme';
+import type { ClientsItemType } from '../../@types/Clients';
 // import { clientsMock } from './mockclients';
 
 const clientsInitialState = {

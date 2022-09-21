@@ -1,11 +1,13 @@
 import React from 'react';
+
 import {
-  makeStyles,
   AppBar,
-  Toolbar,
   Container,
   Grid,
+  makeStyles,
+  Toolbar,
 } from '@material-ui/core';
+
 import { DiscountFilters } from '../../@types';
 import FilterLink from '../FilterLink';
 
@@ -17,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const CustomAppBar: React.FC = (props) => {
+const CustomAppBar: React.FC = (props) => {
   const classes = useStyles(props);
   return (
     <div>
