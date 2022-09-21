@@ -6,7 +6,7 @@ This project was built using these technologies.
 
 - [React.js v17](https://17.reactjs.org/)
 - [Material UI v4](https://v4.mui.com/ru/)
-- [json-server](https://github.com/typicode/json-server)
+- [JSON-Server](https://github.com/typicode/json-server)
 
 ## :link: Usefull links
 
@@ -14,12 +14,13 @@ This project was built using these technologies.
 
 - [How to setup Typescript, Eslint, Prettier and React in 5 minutes](https://itnext.io/how-to-setup-typescript-eslint-prettier-and-react-in-5-minutes-44cfe8af5081)
 
-### Guides
+### JSON-Server
 
 - [json-server start](https://gupta-sajal17.medium.com/how-to-create-a-fake-rest-api-with-json-server-34ebba6a964e)
 - [json-server params](https://blog.logrocket.com/how-to-bootstrap-your-project-with-json-server/)
-
 - [concurrently](https://dev.to/numtostr/running-react-and-node-js-in-one-shot-with-concurrently-2oac)
+
+### Guides
 
 - [editable table with Material UI](https://www.geeksforgeeks.org/how-to-create-an-editable-table-with-add-delete-and-search-filter-using-reactjs/)
 
@@ -27,23 +28,23 @@ This project was built using these technologies.
 
 ```bash
 # Install dependencies
-npm install
+yarn
 
 # Serve on localhost:3000
-npm start
+yarn start
 
 # Build for production
-npm run build
+yarn build
 
 # Format with prettier
-npm run format
+yarn format
 
 # Lint with eslint
-npm run lint
+yarn lint
 
 # Start Fake REST API
-npm run json:server
+yarn json:server
 
 # Start CRA and REST API together
-npm run dev
+yarn dev
 ```
