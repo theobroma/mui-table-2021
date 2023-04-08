@@ -2,37 +2,6 @@
   "name": "mui-table-2021",
   "version": "0.1.0",
   "license": "ISC",
-  "private": true,
-  "proxy": "http://localhost:4000",
-  "dependencies": {
-    "@fontsource/open-sans": "^4.5.11",
-    "@fontsource/roboto": "^4.5.8",
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
-    "@reduxjs/toolkit": "^1.8.5",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.0.3",
-    "@types/node": "^18.7.18",
-    "@types/react": "^17.x",
-    "@types/react-dom": "^17.x",
-    "@types/react-redux": "^7.1.24",
-    "@types/redux-logger": "^3.0.9",
-    "axios": "^0.27.2",
-    "json-server": "^0.17.0",
-    "react": "^17.x",
-    "react-dom": "^17.x",
-    "react-redux": "^8.0.2",
-    "react-scripts": "5.0.1",
-    "redux": "^4.2.0",
-    "redux-logger": "^3.0.6",
-    "redux-persist": "^6.0.0",
-    "sass": "^1.54.9",
-    "typescript": "^4.8.3",
-    "web-vitals": "^2.x",
-    "zod": "^3.19.1"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -43,12 +12,6 @@
     "serve": "serve -s build",
     "json:server": "json-server -p 4000 --delay 300 --watch db.json --routes routes.json",
     "dev": "concurrently \"npm run json:server\" \"npm run start\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -62,19 +25,55 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "concurrently": "^7.4.0",
-    "eslint": "^8.x",
-    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
-    "eslint-plugin-simple-import-sort": "^8.0.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
-    "prettier": "^2.7.1"
-  },
-  "engines": {
-    "node": "^16.x"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "resolutions": {
     "@types/react": "17.x",
     "@types/react-dom": "17.x"
-  }
+  },
+  "dependencies": {
+    "@fontsource/open-sans": "^4.5.14",
+    "@fontsource/roboto": "^4.5.8",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@reduxjs/toolkit": "^1.9.3",
+    "axios": "^1.3.5",
+    "json-server": "^0.17.3",
+    "react": "^17.x",
+    "react-dom": "^17.x",
+    "react-redux": "^8.0.5",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.61.0",
+    "typescript": "^4.9.5",
+    "web-vitals": "^3.x",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.x",
+    "@types/react": "^17.x",
+    "@types/react-dom": "^17.x",
+    "@types/react-redux": "^7.1.25",
+    "@types/redux-logger": "^3.0.9",
+    "concurrently": "^8.0.1",
+    "eslint": "^8.x",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.8.7"
+  },
+  "engines": {
+    "node": "^18.x"
+  },
+  "proxy": "http://localhost:4000"
 }
